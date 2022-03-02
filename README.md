@@ -1,6 +1,6 @@
 # Tribal Backend code challenge
 
-This is a little REST miscroservice created with the least amount of packages outside of the standard library, I decided to go the dependecy injection way while maintaning a minimal aproach.
+This is a little REST miscroservice created with the least amount of packages outside of the standard library, I decided to go the dependecy injection way while maintaning a minimal aproach using an in memory cached repository to handle petition restrictions based on ip address.
 
 
 # Run with docker
