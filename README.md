@@ -6,19 +6,19 @@ This is a little REST miscroservice created with the least amount of packages ou
 # Run with docker
 
 ```
-# docker build -t app .
+ docker build -t app .
 ```
 runing it, the app listens on the 8080 port
 
 ```
-## docker run -it -p 8080:8080 app
+ docker run -it -p 8080:8080 app
 ```
 # Sending request
 
 The app has a single endpoint, '/eval', here's an example of a request using curl:
 
 ```
-## curl -d '{                                
+ curl -d '{                                
 "foundingType": "STARTUP",
 "cashBalance": 2000.30,
 "monthlyRevenue": 4435.45,
