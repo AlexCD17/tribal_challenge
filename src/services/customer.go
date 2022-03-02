@@ -1,3 +1,4 @@
+// Package services has the customer service, all interactions with the repo is happens here
 package services
 
 import (

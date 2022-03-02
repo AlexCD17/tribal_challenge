@@ -25,7 +25,7 @@ func TestRepository_SetCustomer(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "fail create customer",
+			name: "failing create customer",
 			args: args{
 				key: "15",
 				customer: entitites.Customer{
@@ -108,7 +108,7 @@ func TestRepository_UpdateCustomer(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "fail update customer",
+			name: "fail update",
 			args: args{
 				key: "19",
 				customer: entitites.Customer{
@@ -124,9 +124,9 @@ func TestRepository_UpdateCustomer(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name: "succesfully created customer",
+			name: "successfully updated",
 			args: args{
-				key: "13",
+				key: "32",
 				customer: entitites.Customer{
 					FoundingType:    "SME",
 					CashBalance:     1300,
@@ -156,18 +156,19 @@ func TestRepository_UpdateCustomer(t *testing.T) {
 			c := &fields{
 				cache: cachedb,
 			}
+			c.cache.SetCustomer(tt.args.key, tt.args.customer)
 
 			err := c.cache.UpdateCustomer(tt.args.key, tt.args.customer)
 			if err != nil {
-				t.Errorf("customerRepo.SetCustomer() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("customerRepo.UpdateCustomer() error = %v, wantErr %v", err, tt.wantErr)
 			}
 			rec, err := c.cache.GetCustomer(tt.args.key)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("customerRepo.SetCustomer() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("customerRepo.UpdateCustomer() error = %v, wantErr %v", err, tt.wantErr)
 			}
 
 			if !reflect.DeepEqual(rec, tt.want) {
-				t.Errorf("SetCustomer() = %v, want %v", rec, tt.want)
+				t.Errorf("customerRepo.UpdateCustomer() error = %v, want %v", rec, tt.want)
 			}
 
 		})

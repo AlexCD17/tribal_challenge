@@ -1,3 +1,4 @@
+// Package customers provides the repository creation and interface for possible mockups down the road.
 package customers
 
 import (
@@ -16,16 +17,6 @@ type CustomerRepo interface {
 
 type Repository struct {
 	data *cache.Cache
-}
-
-type customerData struct {
-	FoundingType    string    `json:"foundingType"`
-	CashBalance     float64   `json:"cashBalance"`
-	MonthlyRevenue  float64   `json:"monthlyRevenue"`
-	RequestedCredit float64   `json:"requestedCredit"`
-	RequestedDate   time.Time `json:"requestedDate"`
-	Tries           uint      `json:"tries"`
-	Accepted        bool      `json:"accepted"`
 }
 
 func NewRepository() *Repository {

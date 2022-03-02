@@ -1,3 +1,4 @@
+// Package entrypoints also provides the main entrypoint here, GetCredit, where all the bussines logic is invoked using DI to services/usecases
 package entrypoints
 
 import (

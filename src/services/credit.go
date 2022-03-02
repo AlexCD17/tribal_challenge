@@ -1,3 +1,4 @@
+// Package services has all the business logic, such as the credit procedures based on the rules provided
 package services
 
 import (

@@ -43,7 +43,7 @@ func TestServer_GetCredit(t *testing.T) {
 			},
 			wantStatus: http.StatusOK,
 			wantHeader: http.Header{"Content-Type": {"application/json"}},
-			wantBody:   "credit line accepted for the following amount: $ 200.000000",
+			wantBody:   "credit line accepted for the following amount: $ 200.00",
 		},
 		{
 			name: "rejected credit line",

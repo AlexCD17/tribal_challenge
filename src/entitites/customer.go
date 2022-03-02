@@ -1,3 +1,4 @@
+// Package entitites provides the Customer struct used for handling requests as well as in memory storage object.
 package entitites
 
 import "time"

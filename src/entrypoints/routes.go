@@ -1,3 +1,4 @@
+// Package entrypoints provides the server initialization and configuration
 package entrypoints
 
 import (
