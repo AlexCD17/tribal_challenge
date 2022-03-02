@@ -8,7 +8,7 @@ This is a little REST miscroservice created with the least amount of packages ou
 ```
  docker build -t app .
 ```
-runing it, the app listens on the 8080 port
+runing it, the app listen on the 8080 port
 
 ```
  docker run -it -p 8080:8080 app
